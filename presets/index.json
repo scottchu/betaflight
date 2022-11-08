@@ -132,10 +132,58 @@
     }
   },
   "uniqueValues": {
-    "firmware_version": [],
-    "category": [],
-    "author": [],
-    "keywords": []
+    "firmware_version": [
+      "4.3"
+    ],
+    "category": [
+      "BNF",
+      "OSD"
+    ],
+    "author": [
+      "Betaflight",
+      "Scottsfree"
+    ],
+    "keywords": [
+      "defaults",
+      "DJI",
+      "GPS",
+      "OSD",
+      "reset"
+    ]
   },
-  "presets": []
+  "presets": [
+    {
+      "fullPath": "presets/4.3/apex/defaults.txt",
+      "hash": "3e8bcdf275992867b3409180294e76f42d3d54b7a79d7cb8e21f30f93bbf0ad7",
+      "title": "Apex HD Defaults",
+      "firmware_version": [
+        "4.3"
+      ],
+      "category": "BNF",
+      "status": "COMMUNITY",
+      "keywords": [
+        "DJI",
+        "GPS"
+      ],
+      "author": "Scottsfree",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/4.3/osd/defaults.txt",
+      "hash": "6690501a1bc3837d67c74167663d635300afb1db78216a1433f5478e6bb6dabe",
+      "title": "Default 4.3 OSD settings",
+      "firmware_version": [
+        "4.3"
+      ],
+      "category": "OSD",
+      "status": "OFFICIAL",
+      "keywords": [
+        "defaults",
+        "reset",
+        "OSD"
+      ],
+      "author": "Betaflight",
+      "priority": 0
+    }
+  ]
 }
