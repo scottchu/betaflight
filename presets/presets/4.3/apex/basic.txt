@@ -1,0 +1,160 @@
+defaults nosave
+
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.3.1 Jul 13 2022 / 03:36:10 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: AIKO, board_name: AIKONF7, version: aa58e35c, date: 2022-10-28T00:01:29Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name AIKONF7
+manufacturer_id AIKO
+mcu_id 000f002d3756500920383558
+signature 
+
+# name: Apex HD
+
+# resources
+resource MOTOR 7 NONE
+resource MOTOR 8 NONE
+
+# timer
+timer A02 AF3
+# pin A02: TIM9 CH1 (AF3)
+timer A03 AF3
+# pin A03: TIM9 CH2 (AF3)
+timer A00 AF2
+# pin A00: TIM5 CH1 (AF2)
+timer A01 AF2
+# pin A01: TIM5 CH2 (AF2)
+timer B07 NONE
+timer B01 NONE
+
+# dma
+dma ADC 1 1
+# ADC 1: DMA2 Stream 4 Channel 0
+dma pin C06 0
+# pin C06: DMA2 Stream 2 Channel 0
+dma pin C07 0
+# pin C07: DMA2 Stream 2 Channel 0
+dma pin C08 0
+# pin C08: DMA2 Stream 2 Channel 0
+dma pin A00 0
+# pin A00: DMA1 Stream 2 Channel 6
+dma pin A01 0
+# pin A01: DMA1 Stream 4 Channel 6
+dma pin B01 NONE
+dma pin A15 NONE
+
+# feature
+feature -RX_PARALLEL_PWM
+feature GPS
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 2 1 115200 57600 0 115200
+serial 3 64 115200 57600 0 115200
+serial 4 2 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# aux
+aux 0 0 0 1300 2100 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 3 1700 2100 0 0
+
+# master
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set acc_calibration = -14,6,29,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set rc_smoothing_auto_factor = 25
+set serialrx_provider = CRSF
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set failsafe_procedure = GPS-RESCUE
+set align_board_yaw = 180
+set vbat_max_cell_voltage = 440
+set ibata_scale = 200
+set yaw_motors_reversed = ON
+set small_angle = 180
+set gps_provider = UBLOX
+set gps_sbas_mode = AUTO
+set gps_rescue_min_sats = 5
+set gps_rescue_allow_arming_without_fix = ON
+set report_cell_voltage = ON
+set osd_rssi_pos = 2112
+set osd_link_quality_pos = 2080
+set osd_rssi_dbm_pos = 64
+set osd_tim_1_pos = 2176
+set osd_tim_2_pos = 2208
+set osd_flymode_pos = 2049
+set osd_crosshairs_pos = 237
+set osd_gps_speed_pos = 2105
+set osd_gps_lon_pos = 81
+set osd_gps_sats_pos = 2072
+set osd_home_dir_pos = 2136
+set osd_home_dist_pos = 2137
+set osd_flight_dist_pos = 2169
+set osd_altitude_pos = 2199
+set osd_avg_cell_voltage_pos = 2144
+set osd_disarmed_pos = 2346
+set osd_stat_tim_1 = ON
+set osd_stat_total_flights = ON
+set osd_stat_total_time = ON
+set name = Apex HD
+
+profile 0
+
+# profile 0
+set p_pitch = 51
+set i_pitch = 92
+set d_pitch = 65
+set f_pitch = 137
+set p_roll = 49
+set i_roll = 88
+set d_roll = 57
+set f_roll = 132
+set p_yaw = 49
+set i_yaw = 88
+set f_yaw = 132
+set angle_level_strength = 100
+set d_min_roll = 42
+set d_min_pitch = 48
+set simplified_master_multiplier = 110
+set simplified_d_gain = 130
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
